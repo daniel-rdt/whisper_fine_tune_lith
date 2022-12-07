@@ -38,4 +38,4 @@ The second approach would be to utilize a different datasource. Clearly utilizin
 ## UI Inference
 The UI Inference demo can be found here: https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
 
-The aim of the UI is to demonstrate the value-added capanilities of the fine-tuned model. The user can paste any youtube url and prompt the model to transcribe the first few sentences of spoken lithuanian text in the video. Useful applications include the transcription of news feed as well as political speeches or even podcasts.
+The aim of the UI is to demonstrate the value-added capabilities of the fine-tuned model. The user can paste any youtube url and prompt the model to transcribe the first few sentences of spoken lithuanian text in the video. Useful applications include the transcription of news feed as well as political speeches or even podcasts.
