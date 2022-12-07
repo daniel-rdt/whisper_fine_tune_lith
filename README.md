@@ -27,7 +27,9 @@ The first approach to increase model performance would be to fine-tune the model
 
 It was possible to varify this apporach. As expected, with an increased learning-reate from 1e-5 to 5e-5, the model shows worse WER performance in the earlier checkpoints but catches up during the later steps of the training. Compared to the base set-up the best model WER improved from 32.4971 to 28.1159 WER. 
 
+
 The improved model (which will be further used) and the used hyperparamters can be found here: https://huggingface.co/daniel-rdt/whisper-lt-finetune
+
 The base model and the used hyperparameters can be found here: https://huggingface.co/Tomas1234/common_voice
 
 ### Data-centric approach
