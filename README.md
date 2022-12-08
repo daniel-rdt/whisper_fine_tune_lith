@@ -33,7 +33,7 @@ The improved model (which will be further used) and the used hyperparamters can 
 The base model and the used hyperparameters can be found here: https://huggingface.co/Tomas1234/common_voice
 
 ### Data-centric approach
-The second approach would be to utilize a different datasource. Clearly utilizing a greater amount of training data is very probable to yield better model performance. For excample, instead of fine-tuning the model on the `whisper-small checkpoint of the whisper model, one could utilize the greater checkpoint of `whisper-medium`. Since this comes with considerably larger computational times however, within the scope of this lab assignment, this approach could not be varified. 
+The second approach would be to utilize a different datasource. Clearly utilizing a greater amount of training data is very probable to yield better model performance. For excample, instead of fine-tuning the model on the `whisper-small` checkpoint of the whisper model, one could utilize the greater checkpoint of `whisper-medium`. Since this comes with considerably larger computational times however, within the scope of this lab assignment, this approach could not be varified. 
 
 ## UI Inference
 The UI Inference demo can be found here: https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
