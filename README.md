@@ -1,6 +1,8 @@
 # Lithuanian Whisper Fine Tune
 Lab2: Lithuanian Text Transcription using Transformers
 
+Link to Inference App: https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
+
 The second lab of the course ID2223 was intended to fine-tune the pre-trained transformer model whisper and build a serverless UI for using that model. The model is based on the blog ''Fine-Tune Whisper For Multilingual ASR with 🤗 Transformers'' by Sanchit Gandhi.
 The program architecture was built to be used serverless and in different pipelines in order to allow to run feature engineering on CPU performance and training on GPUs. The three-pipeline archtitecture consists of:
 
