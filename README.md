@@ -1,8 +1,8 @@
 # Lithuanian Whisper Fine Tune
 Lab2: Lithuanian Text Transcription using Transformers
 
-The second lab of the course ID2223 was intended to fine-tune the pre-trained transformer model whisper and build a serverless UI for using that model.
-The program architecture was built to be used serverless and in different pipelines in order to allow to run feature engineering on CPU performance and training on GPUs. The three pipeline archtitecture consists of:
+The second lab of the course ID2223 was intended to fine-tune the pre-trained transformer model whisper and build a serverless UI for using that model. The model is based on the blog ''Fine-Tune Whisper For Multilingual ASR with 🤗 Transformers'' by Sanchit Gandhi.
+The program architecture was built to be used serverless and in different pipelines in order to allow to run feature engineering on CPU performance and training on GPUs. The three-pipeline archtitecture consists of:
 
 1. whisper_lt_feature_pipeline.ipynb
 2. whisper_lt_training_pipeline.ipynb
@@ -11,7 +11,7 @@ The program architecture was built to be used serverless and in different pipeli
 The feature and training pipeline can either be run locally or using cloud computing services such as google-colab. Especially for the training pipeline, the use of a GPU cloud computing service is recommended.
 
 ## Feature Pipeline
-In the `Feature Pipeline`, first the training and testing dataset `common voice` is imported. Additionally, the loaded dataset is transformed into the correct format for fine-tuning the whisper model. A feature extractor which pre-processes the raw audio-inputs is needed. For this purpose a so-called `WhisperProcessor` from HuggingFace transformers is utilized that can also be used as the tokenizer which post-processes the model outputs to text format later. The lithuanian whisper-small checkpoint is used for this.
+In the `Feature Pipeline`, first the training and testing dataset `common voice` is imported. Additionally, the loaded dataset is transformed into the correct format for fine-tuning the whisper model. A feature extractor which pre-processes the raw audio-inputs is needed. For this purpose a so-called `WhisperProcessor` from HuggingFace transformers is utilized that can also be used as the tokenizer which post-processes the model outputs to text format later. The Lithuanian whisper-small checkpoint is used for this.
 
 The prepared dataset is then uploaded to `Hopsworks` to be downloaded later in the training pipeline.
 
@@ -33,7 +33,7 @@ The improved model (which will be further used) and the used hyperparamters can 
 The base model and the used hyperparameters can be found here: https://huggingface.co/Tomas1234/common_voice
 
 ### Data-centric approach
-The second approach would be to utilize a different datasource. Clearly utilizing a greater amount of training data is very probable to yield better model performance. For excample, instead of fine-tuning the model on the whisper-small checkpoint of the whisper model, one could utilize the greater checkpoint of `whisper-medium`. Since this comes with considerably larger computational times however, within the scope of this lab assignment, this approach could not be varified. 
+The second approach would be to utilize a different datasource. Clearly utilizing a greater amount of training data is very probable to yield better model performance. For excample, instead of fine-tuning the model on the `whisper-small checkpoint of the whisper model, one could utilize the greater checkpoint of `whisper-medium`. Since this comes with considerably larger computational times however, within the scope of this lab assignment, this approach could not be varified. 
 
 ## UI Inference
 The UI Inference demo can be found here: https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
