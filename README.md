@@ -1,14 +1,16 @@
 # Lithuanian Whisper Fine Tune
 Lab2: Lithuanian Text Transcription using Transformers
 
-Link to Inference App: https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
+Link to Inference App (Task 1): https://huggingface.co/spaces/Tomas1234/whisper-lt
+Link to Inference App (Task 2): https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
 
 The second lab of the course ID2223 was intended to fine-tune the pre-trained transformer model whisper and build a serverless UI for using that model. The model is based on the blog ''Fine-Tune Whisper For Multilingual ASR with 🤗 Transformers'' by Sanchit Gandhi.
 The program architecture was built to be used serverless and in different pipelines in order to allow to run feature engineering on CPU performance and training on GPUs. The three-pipeline archtitecture consists of:
 
 1. whisper_lt_feature_pipeline.ipynb
 2. whisper_lt_training_pipeline.ipynb
-3. huggingface-whisper-lt-finetune/app.py
+3. huggingface-whisper-lt/app.py
+4. huggingface-whisper-lt-finetune/app.py
 
 The feature and training pipeline can either be run locally or using cloud computing services such as google-colab. Especially for the training pipeline, the use of a GPU cloud computing service is recommended.
 
@@ -19,7 +21,7 @@ The prepared dataset is then uploaded to `Hopsworks` to be downloaded later in t
 
 ## Training Pipeline
 
-In the `Training Pipeline` as a first step, it needs to be made sure that an appropriate GPU is being used or assigned respectively. Then the pre-processed common-voice dataset is loaded from hopsworks.
+In the `Training Pipeline` as a first step, it needs to be made sure that an appropriate GPU is being used or assigned respectively. Then the pre-processed common-voice dataset is loaded from `Hopsworks`.
 Then, to perform the model training, a datacollector needs to be defined. Again the WhisperProcessor is utilized here. As evaluation metric `Word Error Rate (WER)` is used. The from the `whisper-small` checkpoint the model is trained using the `Seq2SeqTrainer` from HuggingFace transformers.
 
 There are two different approaches that can be used to improve model performance when training the model:
@@ -38,6 +40,8 @@ The base model and the used hyperparameters can be found here: https://huggingfa
 The second approach would be to utilize a different datasource. Clearly utilizing a greater amount of training data is very probable to yield better model performance. For excample, instead of fine-tuning the model on the `whisper-small` checkpoint of the whisper model, one could utilize the greater checkpoint of `whisper-medium`. Since this comes with considerably larger computational times however, within the scope of this lab assignment, this approach could not be varified. 
 
 ## UI Inference
-The UI Inference demo can be found here: https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
+The UI Inference demo for the base model can be found here: (Task 1): https://huggingface.co/spaces/Tomas1234/whisper-lt
+The UI Inference demo for the improved model can be found here: (Task 2): https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
 
-The aim of the UI is to demonstrate the value-added capabilities of the fine-tuned model. The user can paste any youtube url and prompt the model to transcribe the first few sentences of spoken lithuanian text in the video. Useful applications include the transcription of news feed as well as political speeches or even podcasts.
+
+The aim of the UI (Task 2) is to demonstrate the value-added capabilities of the fine-tuned model. The user can paste any youtube url and prompt the model to transcribe the first few sentences of spoken Lithuanian text in the video. Useful applications include the transcription of news feed as well as political speeches or even podcasts. The transcribed text is translated into English.
