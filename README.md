@@ -46,4 +46,4 @@ The UI Inference demo for the base model can be found here: (Task 1): https://hu
 The UI Inference demo for the improved model can be found here: (Task 2): https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
 
 
-The aim of the UI (Task 2) is to demonstrate the value-added capabilities of the fine-tuned model. The user can paste any youtube url and prompt the model to transcribe the first few sentences of spoken Lithuanian text in the video. Useful applications include the transcription of news feed as well as political speeches or even podcasts. The transcribed text is translated into English.
+The aim of the UI (Task 2) is to demonstrate the value-added capabilities of the fine-tuned model. The user can paste any youtube url and prompt the model to transcribe the first few sentences of spoken Lithuanian text in the video. Useful applications include the transcription of news feed as well as political speeches or even podcasts.
