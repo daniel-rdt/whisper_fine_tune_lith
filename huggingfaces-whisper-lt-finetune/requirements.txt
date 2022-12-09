@@ -1,5 +1,5 @@
-os
 torch
 transformers
 pytube
 ffmpeg
+googletrans==3.1.0a0
