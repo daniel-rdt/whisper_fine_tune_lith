@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# files
+.gitignore
+huggingfaces-whisper-lt-finetune/.DSStore
+
 # C extensions
 *.so
 
