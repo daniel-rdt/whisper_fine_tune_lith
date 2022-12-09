@@ -41,6 +41,7 @@ The second approach would be to utilize a different datasource. Clearly utilizin
 
 ## UI Inference
 The UI Inference demo for the base model can be found here: (Task 1): https://huggingface.co/spaces/Tomas1234/whisper-lt
+
 The UI Inference demo for the improved model can be found here: (Task 2): https://huggingface.co/spaces/daniel-rdt/whisper-lt-finetune
 
 
